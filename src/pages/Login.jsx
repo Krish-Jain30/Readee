@@ -8,17 +8,14 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    alert(`Email: ${email}, Password: ${password}`);
-  };
-
   return (
-    <div className="flex min-h-screen">
-      <div className="w-full md:w-1/2 flex items-center justify-center bg-[#1a1a1a]">
-        <Card className="p-6 w-96 bg-[#2a2a2a]">
-          <h2 className="text-2xl font-bold text-center mb-6 text-[#fef1e1]">Login</h2>
-          <form onSubmit={handleLogin}>
+    <div className="flex flex-col lg:flex-row bg-[#1a1a1a] min-h-screen">
+      <div className="w-full lg:w-1/2 flex items-center justify-center bg-[#1a1a1a] px-4 py-10 md:py-16 lg:py-24">
+        <Card className="p-6 w-full max-w-md bg-[#2a2a2a]">
+          <h2 className="text-2xl font-bold text-center mb-2 mt-2 text-[#fef1e1]">
+            Welcome Back !
+          </h2>
+          <form>
             <div className="mb-4">
               <Label htmlFor="email" className="block text-[#fef1e1]">Email</Label>
               <Input
@@ -31,7 +28,7 @@ const Login = () => {
               />
             </div>
 
-            <div className="mb-4">
+            <div className="mb-1">
               <Label htmlFor="password" className="block text-[#fef1e1]">Password</Label>
               <Input
                 type="password"
@@ -41,6 +38,15 @@ const Login = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
+            </div>
+
+            <div className="mb-4 text-right">
+              <a
+                href="/forgot-password"
+                className="text-sm text-[#fc350b] hover:underline"
+              >
+                Forgot Password?
+              </a>
             </div>
 
             <button
@@ -62,8 +68,10 @@ const Login = () => {
         </Card>
       </div>
 
-      {/* Right Side - Image */}
-      <div className="hidden md:block w-1/2 bg-cover bg-center" style={{ backgroundImage: `url(${LoginImage})` }}></div>
+      <div
+        className="hidden bg-[#1a1a1a] lg:block lg:w-1/2 bg-cover bg-center"
+        style={{ backgroundImage: `url(${LoginImage})` }}
+      ></div>
     </div>
   );
 };

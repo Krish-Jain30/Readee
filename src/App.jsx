@@ -14,7 +14,7 @@ import AboutUs from "./pages/AboutUs"
 import BookDetail from "./pages/BookDetail"
 import Login from "./pages/Login"
 import Playlist from "./pages/Playlist"
-import SignUp from "./pages/SignUp"
+import Register from "./pages/Register"
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
           <Route path="/category" element={<CategoryPage />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/book/:id" element={<BookDetail />} />
           <Route path="/playlists" element={<Playlist />} />
           <Route path="/playlists/:playlistName" element={<Playlist />} />
