@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card";
+import { Card } from "@/components/ui/Card";
 import { Button, Input } from "@headlessui/react";
 import { Label } from "@radix-ui/react-dropdown-menu";
 import React, { useState } from "react";
